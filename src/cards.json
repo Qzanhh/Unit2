@@ -1,0 +1,162 @@
+[
+    {
+      "id": 1,
+      "question": "What is the capital of France?",
+      "answer": "Paris",
+      "category": "Geography",
+      "difficulty": "easy",
+      "image": "/images/paris.jpg"
+    },
+    {
+      "id": 2,
+      "question": "Which planet is known as the Red Planet?",
+      "answer": "Mars",
+      "category": "Astronomy",
+      "difficulty": "easy",
+      "image": "/images/mars.jpg"
+    },
+    {
+      "id": 3,
+      "question": "What does CPU stand for in computers?",
+      "answer": "Central Processing Unit",
+      "category": "Computers",
+      "difficulty": "easy",
+      "image": "/images/cpu.jpg"
+    },
+    {
+      "id": 4,
+      "question": "What is the largest desert in the world?",
+      "answer": "Sahara Desert",
+      "category": "Geography",
+      "difficulty": "medium",
+      "image": "/images/sahara.jpg"
+    },
+    {
+      "id": 5,
+      "question": "What is the name of the galaxy that contains our Solar System?",
+      "answer": "Milky Way",
+      "category": "Astronomy",
+      "difficulty": "medium",
+      "image": "/images/milky_way.jpg"
+    },
+    {
+      "id": 6,
+      "question": "What is the main function of RAM in a computer?",
+      "answer": "To store data temporarily",
+      "category": "Computers",
+      "difficulty": "medium",
+      "image": "/images/ram.jpg"
+    },
+    {
+      "id": 7,
+      "question": "Which country has the most natural lakes?",
+      "answer": "Canada",
+      "category": "Geography",
+      "difficulty": "hard",
+      "image": "/images/canada.jpg"
+    },
+    {
+      "id": 8,
+      "question": "What is the name of the largest moon of Saturn?",
+      "answer": "Titan",
+      "category": "Astronomy",
+      "difficulty": "hard",
+      "image": "/images/titan.jpg"
+    },
+    {
+      "id": 9,
+      "question": "What does HTTP stand for?",
+      "answer": "HyperText Transfer Protocol",
+      "category": "Computers",
+      "difficulty": "hard",
+      "image": "/images/http.jpg"
+    },
+    {
+      "id": 10,
+      "question": "Which river is the longest in the world?",
+      "answer": "Nile River",
+      "category": "Geography",
+      "difficulty": "easy",
+      "image": "/images/nile.jpg"
+    },
+    {
+      "id": 11,
+      "question": "What is the closest star to Earth?",
+      "answer": "The Sun",
+      "category": "Astronomy",
+      "difficulty": "easy",
+      "image": "/images/sun.jpg"
+    },
+    {
+      "id": 12,
+      "question": "What does GPU stand for in computers?",
+      "answer": "Graphics Processing Unit",
+      "category": "Computers",
+      "difficulty": "easy",
+      "image": "/images/gpu.jpg"
+    },
+    {
+      "id": 13,
+      "question": "Which continent is the largest by land area?",
+      "answer": "Asia",
+      "category": "Geography",
+      "difficulty": "medium",
+      "image": "/images/asia.jpg"
+    },
+    {
+      "id": 14,
+      "question": "Name of the first artificial satellite launched into space?",
+      "answer": "Sputnik 1",
+      "category": "Astronomy",
+      "difficulty": "medium",
+      "image": "/images/sputnik.jpg"
+    },
+    {
+      "id": 15,
+      "question": "What is the main purpose of an operating system?",
+      "answer": "To manage computer hardware and software resources",
+      "category": "Computers",
+      "difficulty": "medium",
+      "image": "/images/os.jpg"
+    },
+    {
+      "id": 16,
+      "question": "Which country is home to the Great Barrier Reef?",
+      "answer": "Australia",
+      "category": "Geography",
+      "difficulty": "hard",
+      "image": "/images/great_barrier_reef.jpg"
+    },
+    {
+      "id": 17,
+      "question": "What is the name of the largest volcano in the solar system?",
+      "answer": "Olympus Mons",
+      "category": "Astronomy",
+      "difficulty": "hard",
+      "image": "/images/olympus_mons.jpg"
+    },
+    {
+      "id": 18,
+      "question": "What does SSD stand for in computers?",
+      "answer": "Solid State Drive",
+      "category": "Computers",
+      "difficulty": "hard",
+      "image": "/images/ssd.jpg"
+    },
+    {
+      "id": 19,
+      "question": "Which ocean is the deepest in the world?",
+      "answer": "Pacific Ocean",
+      "category": "Geography",
+      "difficulty": "easy",
+      "image": "/images/pacific.jpg"
+    },
+    {
+      "id": 20,
+      "question": "Name of the second largest planet in our solar system?",
+      "answer": "Saturn",
+      "category": "Astronomy",
+      "difficulty": "easy",
+      "image": "/images/saturn.jpg"
+    }
+  ]
