@@ -5,29 +5,32 @@ import { useState, useEffect } from 'react';
 
 const App = () => {
   const [count, setCount] = useState(0);
-  const [streak, setStreak] = useState(0)
+  const [streak, setStreak] = useState(0);
   const [guess, setGuess] = useState('');
   const [feedback, setFeedback] = useState('');
   const [isCorrect, setIsCorrect] = useState(null);
-  const card = cardData[count];
-  // let longestStreak = 0;
+  // Add cards as state so we can update them
+  const [cards, setCards] = useState([...cardData]);
   const [longestStreak, setLongestStreak] = useState(0);
-  const nextClick = () =>{
-    setCount((count + 1) % 20);
+  
+  const card = cards[count];
+
+  const nextClick = () => {
+    setCount((count + 1) % cards.length);
     setFeedback('');
     setGuess('');
     setIsCorrect(null);
   }
 
   const prevClick = () => {
-    setCount((count + 19) % 20);
+    setCount((count + cards.length - 1) % cards.length);
     setFeedback('');
     setGuess('');
     setIsCorrect(null);
   }
 
   const shuffleClick = () => {
-    const randomIndex = Math.floor(Math.random() * cardData.length);
+    const randomIndex = Math.floor(Math.random() * cards.length);
     setCount(randomIndex);
     setFeedback('');
     setGuess('');
@@ -50,6 +53,22 @@ const App = () => {
     
     setFeedback(message);
   }
+
+  // Fixed markClick function
+  const markClick = () => {
+    // Create a new array without the current card
+    const newCards = cards.filter((_, index) => index !== count);
+    setCards(newCards);
+    
+    // Adjust count if needed
+    if (count >= newCards.length) {
+      setCount(newCards.length - 1);
+    }
+    
+    setFeedback('Card marked as learned and removed from deck!');
+    setGuess('');
+    setIsCorrect(null);
+  };
 
   // Define styles based on correctness
   const getContainerStyle = () => {
@@ -88,6 +107,7 @@ const App = () => {
     }
     return {};
   };
+
   useEffect(() => {
     if (streak > longestStreak) {
       setLongestStreak(streak);
@@ -101,37 +121,43 @@ const App = () => {
         <p>Your streak: {streak} ~~ Your longest streak: {longestStreak} ~~ Your card number: {count}</p>
       </div>
       <div className='container'>
-        <p>Number of cards: {cardData.length}</p>
-        <Card question={card.question} answer={card.answer} difficulty={card.difficulty} image={card.image} />
-        
-        <form 
-          onSubmit={handleSubmit} 
-          className="p-4 border rounded-xl shadow-md"
-          style={getContainerStyle()}
-        >
-          <input
-            type="text"
-            value={guess}
-            onChange={(e) => setGuess(e.target.value)}
-            placeholder="Your guess"
-            className="p-2 border rounded-xl w-full"
-            style={getInputStyle()}
-          />
-          <button type='submit'>Submit guess</button>
-        </form>
-        
-        {feedback && (
-          <p style={getFeedbackStyle()} className="mt-2">
-            {feedback}
-          </p>
+        <p>Number of cards: {cards.length}</p>
+        {cards.length > 0 ? (
+          <>
+            <Card question={card.question} answer={card.answer} difficulty={card.difficulty} image={card.image} />
+            
+            <form 
+              onSubmit={handleSubmit} 
+              className="p-4 border rounded-xl shadow-md"
+              style={getContainerStyle()}
+            >
+              <input
+                type="text"
+                value={guess}
+                onChange={(e) => setGuess(e.target.value)}
+                placeholder="Your guess"
+                className="p-2 border rounded-xl w-full"
+                style={getInputStyle()}
+              />
+              <button type='submit'>Submit guess</button>
+            </form>
+            
+            {feedback && (
+              <p style={getFeedbackStyle()} className="mt-2">
+                {feedback}
+              </p>
+            )}
+            
+            <div>
+              <button onClick={prevClick}>Previous</button>
+              <button onClick={shuffleClick}>Shuffle</button>
+              <button onClick={nextClick}>Next</button>
+              <button onClick={markClick}>Mark as learned</button>
+            </div>
+          </>
+        ) : (
+          <p>Congratulations! You've learned all the cards!</p>
         )}
-        
-        <div>
-          <button onClick={prevClick}>Previous</button>
-          <button onClick={shuffleClick}>Shuffle</button>
-          <button onClick={nextClick}>Next</button>
-          {/* <button onClick={markClick}>Mark as learnt</button> */}
-        </div>
       </div>
     </div>
   );
