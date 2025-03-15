@@ -3,6 +3,7 @@
     height: 200px;
     /* perspective: 1000px; */
     margin: 2.5rem auto; 
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
