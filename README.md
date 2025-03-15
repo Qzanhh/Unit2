@@ -29,6 +29,8 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+![demo2](https://github.com/user-attachments/assets/a02078cc-37ed-4fef-968f-a2d91b420df1)
+![demo3](https://github.com/user-attachments/assets/9003515b-6a48-4055-8b38-c6410b6fc108)
 
 
 <!-- Replace this with whatever GIF tool you used! -->
